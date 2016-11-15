@@ -10,12 +10,12 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+Route::get('test/push', function () {
+    return view('test/push');
+});
 
 Validator::extend('recaptcha', 'ReCaptchaValidation@recaptcha');
 
-Route::get('recaptcha', function () {
-    return view('recaptcha');
-});
 
 
 
