@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'WebSurf') }}</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
 
     <!-- Scripts -->
     <script>
@@ -21,6 +21,9 @@
     </script>
 </head>
 <body>
+
+
+
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
@@ -81,7 +84,11 @@
         @yield('content')
     </div>
 
+
+
+
+
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
+    <script src="{{ elixir('js/app.js') }}"></script>
 </body>
 </html>
