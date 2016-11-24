@@ -39,6 +39,81 @@ const vuetest = new Vue({
 		  },
 });
 
+var app3 =  new Vue({
+        el: '#app-3',
+
+        props: ['sec'],
+
+        data () {
+          return {
+                  currentNumber: null,
+                  timer: null,
+                  status: false,
+                  //widgetId: false
+          }
+        },
+
+
+        
+
+        created: function () {
+            //this.startRotation();
+            //this.currentNumber = 2;
+            //this.widgetId = this.sec;
+        },
+
+        methods: {
+            startRotation: function() { 
+
+                //console.log(this);
+                if(this.currentNumber == null) {
+                  this.currentNumber = this.$el.getElementsByTagName("iframe")[0].getAttribute("sec");
+                }
+                
+                //this.currentNumber = 120;
+                if(this.status != true) {
+                  this.timer = setInterval(this.next, 1000);
+                }
+            },
+
+            next: function() {
+                this.currentNumber -= 1;
+
+                if(this.currentNumber == parseInt(0)) {
+                  console.log('Load captcha');
+                  this.status = true;
+                  this.stop();
+                }
+                // if(this.timer >= 10) {
+                //     this.confirmOut();
+                //     }
+            },
+
+            stop: function() {
+                clearInterval(this.timer);
+            },
+
+            mouseLeave: function() {
+                console.log('Mouse Leave');
+                this.stop();
+            },
+            mouseOver: function() {
+                this.startRotation();
+                console.log('Mouse mouseover')
+            },
+
+            confirmOut() {
+              if (confirm("Может вы желаете покинуть серфинг данной страницы?")) {
+                alert('Да');
+              } else {
+                alert('Нет');
+              }
+            },
+        }
+
+
+    });
+
 
 /*
 var example3component = Vue.extend({

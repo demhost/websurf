@@ -14,6 +14,10 @@ Route::get('test/push', function () {
     return view('test/push');
 });
 
+Route::get('test/yandex', function () {
+    return view('test/yandex');
+});
+
 Route::get('test/vue', function () {
     return view('test/vue');
 });

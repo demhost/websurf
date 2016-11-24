@@ -79,6 +79,13 @@
 
 </div>
 
+<div id="app-3">
+@{{ currentNumber }}
+ <iframe id="surfwindow" src="http://demhost.dev" width="100%" height="300px" :sec="5" @mouseleave="mouseLeave" @mouseover="mouseOver">
+    Ваш браузер не поддерживает плавающие фреймы!
+ </iframe>
+
+</div>
 
 
 <div id="vuetest">
