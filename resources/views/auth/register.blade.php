@@ -64,7 +64,7 @@
                             <label for="g-recaptcha-response" class="col-md-4 control-label">Проверка</label>
 
                             <div class="col-md-6">
-                                <div class="g-recaptcha" data-sitekey="config('app.recaptcha.site')"></div>
+                                <div class="g-recaptcha" data-sitekey="{{ config('app.recaptcha.site') }}"></div>
 
                                 @if ($errors->has('g-recaptcha-response'))
                                     <span class="help-block">
