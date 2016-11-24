@@ -23,7 +23,7 @@ const app = new Vue({
 */
 
 
-/*
+
 const form1 = new Vue({
     el: '#form1',
       data () {
@@ -117,7 +117,7 @@ var app3 =  new Vue({
 
     });
 
-*/
+
 
 
 
