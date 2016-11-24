@@ -12,7 +12,7 @@ class ReCaptchaValidation
   public function recaptcha($field, $value, $parameters){
 
   			$gRecaptchaResponse = $value;
-            $recaptcha = new \ReCaptcha\ReCaptcha(env('RECAPTCHA_SECRET'));
+            $recaptcha = new \ReCaptcha\ReCaptcha(config('app.recaptcha.secret'));
             $resp = $recaptcha->verify($gRecaptchaResponse, $_SERVER['REMOTE_ADDR']);
              if ($resp->isSuccess()) {
                         return $value;
