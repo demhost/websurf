@@ -113,6 +113,11 @@ return [
         'site' => env('RECAPTCHA_SITE'),
     ],
 
+    'domains' => [
+        'app' => env('DOMAINS_APP'),
+        'sub' => env('DOMAINS_SUB'),
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Logging Configuration

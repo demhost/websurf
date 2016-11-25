@@ -75,9 +75,7 @@
                         </div>
                         
 
-            <script type="text/javascript"
-                    src="https://www.google.com/recaptcha/api.js?hl={{ config('app.locale') }}">
-            </script>
+            <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl={{ config('app.locale') }}"></script>
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">

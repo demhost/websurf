@@ -38,6 +38,22 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
+                            <label for="g-recaptcha-response" class="col-md-4 control-label">Проверка</label>
+
+                            <div class="col-md-6">
+                                <div class="g-recaptcha" data-sitekey="{{ config('app.recaptcha.site') }}"></div>
+
+                                @if ($errors->has('g-recaptcha-response'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl={{ config('app.locale') }}"></script>
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <div class="checkbox">

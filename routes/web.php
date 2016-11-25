@@ -10,6 +10,15 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+
+Route::group(['domain' => config('app.domains.sub')], function () {
+	Route::get('/', function () {
+	    return 'start surf';
+	});
+});
+
+Route::group(['domain' => config('app.domains.app')], function () {
+
 Route::get('test/push', function () {
     return view('test/push');
 });
@@ -45,3 +54,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+
+});
